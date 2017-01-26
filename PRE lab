@@ -1,0 +1,84 @@
+int turn=1;
+unsigned long previousMillis = 0;
+const long interval = 1000;  
+
+void setup() {
+  // put your setup code here, to run once:
+   pinMode(1,OUTPUT);
+ pinMode(2,OUTPUT);
+ pinMode(3,OUTPUT);
+ pinMode(4,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+unsigned long currentMillis = millis();
+  if ((currentMillis - previousMillis >= interval)&&(turn==1)){
+  
+digitalWrite(1,HIGH);
+turn=2;}
+if ((currentMillis - previousMillis >= interval)&&(turn==2)){
+  previousMillis = currentMillis;
+digitalWrite(2,HIGH);
+
+turn=3;}
+if ((currentMillis - previousMillis >= interval)&&(turn==3)){
+  previousMillis = currentMillis;
+digitalWrite(3,HIGH);
+turn=4;}
+if ((currentMillis - previousMillis >= interval)&&(turn==4)){
+  previousMillis = currentMillis;
+digitalWrite(4,HIGH);
+turn=5;}
+if ((currentMillis - previousMillis >= interval)&&(turn==5)){
+  previousMillis = currentMillis;
+digitalWrite(1,LOW);
+turn=6;}
+if ((currentMillis - previousMillis >= interval)&&(turn==6)){
+  previousMillis = currentMillis;
+digitalWrite(2,LOW);
+turn=7;}
+if ((currentMillis - previousMillis >= interval)&&(turn==7)){
+  previousMillis = currentMillis;
+digitalWrite(3,LOW);
+turn=8;}
+if ((currentMillis - previousMillis >= interval)&&(turn==8)){
+  previousMillis = currentMillis;
+digitalWrite(4,LOW);
+turn=9;}
+if ((currentMillis - previousMillis >= interval)&&(turn==9)){
+  previousMillis = currentMillis;
+digitalWrite(4,HIGH);
+turn=10;}
+if ((currentMillis - previousMillis >= interval)&&(turn==10)){
+  
+digitalWrite(3,HIGH);
+turn=11;}
+if ((currentMillis - previousMillis >= interval)&&(turn==11)){
+  previousMillis = currentMillis;
+digitalWrite(2,HIGH);
+turn=12;}
+if ((currentMillis - previousMillis >= interval)&&(turn==12)){
+  previousMillis = currentMillis;
+digitalWrite(1,HIGH);
+turn=13;}
+if ((currentMillis - previousMillis >= interval)&&(turn==13)){
+  previousMillis = currentMillis;
+digitalWrite(4,LOW);
+turn=14;}
+if ((currentMillis - previousMillis >= interval)&&(turn==14)){
+  previousMillis = currentMillis;
+digitalWrite(3,LOW);
+turn=15;}
+if ((currentMillis - previousMillis >= interval)&&(turn==15)){
+  previousMillis = currentMillis;
+digitalWrite(2,LOW);
+turn=16;}
+if ((currentMillis - previousMillis >= interval)&&(turn==16)){
+  previousMillis = currentMillis;
+digitalWrite(1,LOW);
+turn=1;}}
+
+
+
